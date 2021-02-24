@@ -1,5 +1,5 @@
 .firstpage{
-  background-color: rgb(22, 22, 22);
+  background-color: rgb(47, 41, 41);
   height: 450vh;
 }
 .textinputdiv{
@@ -7,12 +7,17 @@
   /* justify-content: center; */
   margin-left: 30%;
 }
+@media only screen and (max-width: 600px) {
+  .textinputdiv{
+    margin-left: 20%;
+  }
+}
 .headdraft{
   font-family: sans-serif;
   /* height: 5vh; */
-  background-color: rgb(22, 22, 22);
-  outline: rgb(22, 22, 22);
-  border: rgb(22, 22, 22);
+  background-color: rgb(47, 41, 41);
+  outline: rgb(47, 41, 41);
+  border: rgb(47, 41, 41);
   color: white;
   width: 50%;
   margin-top: 10%;
@@ -21,12 +26,17 @@
   resize: none;
   overflow-y: hidden;
 }
+@media only screen and (max-width: 600px) {
+  .headdraft{
+    width: 80%;
+  }
+}
 .headdraft2{
   font-family: sans-serif;
   /* height: 5vh; */
-  background-color: rgb(22, 22, 22);
-  outline: rgb(22, 22, 22);
-  border: rgb(22, 22, 22);
+  background-color: rgb(47, 41, 41);
+  outline: rgb(47, 41, 41);
+  border: rgb(47, 41, 41);
   color: white;
   width: 50%;
   /* margin-top: 10%; */
@@ -40,9 +50,9 @@
 
   resize: none;
   /* height: 5vh; */
-  background-color: rgb(22, 22, 22);
-  outline: rgb(22, 22, 22);
-  border: rgb(22, 22, 22);
+  background-color: rgb(47, 41, 41);
+  outline: rgb(47, 41, 41);
+  border: rgb(47, 41, 41);
   color: white;
   width: 50%;
   /* margin-top: 1%; */
@@ -70,4 +80,197 @@
   border-radius: 0px;
   width: 30%;
   height: 8vh;
+}
+.divback{
+  background-image: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-White-Pattern-Background-Image.jpg);
+  width: 100%;
+  height: 100vh;
+  margin-top: -5%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+}
+.divback1{
+  background-image: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-White-Pattern-Background-Image.jpg);
+  width: 100%;
+  height: 100vh;
+  margin-top: -5%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+}
+.butt {
+  background-color: black;
+  color: white;
+  width: 25%;
+  height: 5vh;
+  border-radius: 15px;
+  font-size: larger;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+}
+
+.butt:hover {
+  border-radius: 10px;
+  width: 30%;
+  height: 8vh;
+}
+@media only screen and (max-width: 600px) {
+  .butt{
+      width: 40%;
+  }
+}
+@media only screen and (max-width: 345px) {
+  .butt {
+      width: 55%;
+  }
+}
+
+
+.div1 {
+  text-align: center;
+}
+
+.image1 {
+  width: 10%;
+}
+
+@media only screen and (max-width: 360px) {
+  .image1 {
+      width: 130px;
+  }
+}
+
+@media only screen and (max-width: 411px) {
+  .image1 {
+      width: 130px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .image1 {
+      width: 130px;
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .image1 {
+      width: 160px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .image1 {
+      width: 130px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .image1 {
+      width: 130px;
+  }
+}
+
+/* @media only screen and (max-width: 360px) {
+  .divback {
+      height: 100%;
+  }
+} */
+
+.firstDiv {
+  /* margin-top: 15%; */
+  text-align: center;
+
+}
+.todo_list:hover{background-color: rgb(180, 179, 179);}
+
+.newNote {
+  font-size: 30px;
+}
+
+.todo_list {
+  background-color: white;
+  border-radius: 30px;
+  border: 1px solid rgb(253, 253, 253);
+  border-width: 2px;
+  width: fit-content;
+  transition: 0.5s;
+  cursor: pointer;
+
+}
+
+.todoDiv {
+  display: flex;
+  justify-content: center;
+}
+
+
+.list{
+  font-size: 24px;
+}
+
+.btn2 {
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  color: black;
+  width: 110px;
+  background-color: white;
+  font-size: larger;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.hed {
+  color: white;
+}
+
+.btn2:hover {
+  border: 1px solid #0275d8;
+  color: white;
+  border-radius: 10px;
+  background-color: #0275d8;
+}
+
+@media only screen and (max-width: 360px) {
+  .btn2 {
+      margin-top: 5px;
+  }
+}
+.Responsive{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.icondiv {
+  background-color: rgb(87, 85, 85);
+  width:110%;
+  border-radius: 10px;
+}
+
+.hed2{
+  color: black;
+  margin-top: 25px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.para1{
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .icondiv{
+      width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .displayflex{
+      display: flex;
+      flex-direction: column;
+  }
 }
