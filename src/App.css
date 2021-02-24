@@ -1,0 +1,73 @@
+.firstpage{
+  background-color: rgb(22, 22, 22);
+  height: 450vh;
+}
+.textinputdiv{
+  /* display: flex; */
+  /* justify-content: center; */
+  margin-left: 30%;
+}
+.headdraft{
+  font-family: sans-serif;
+  /* height: 5vh; */
+  background-color: rgb(22, 22, 22);
+  outline: rgb(22, 22, 22);
+  border: rgb(22, 22, 22);
+  color: white;
+  width: 50%;
+  margin-top: 10%;
+  font-size: xx-large;
+  font-weight: bold;
+  resize: none;
+  overflow-y: hidden;
+}
+.headdraft2{
+  font-family: sans-serif;
+  /* height: 5vh; */
+  background-color: rgb(22, 22, 22);
+  outline: rgb(22, 22, 22);
+  border: rgb(22, 22, 22);
+  color: white;
+  width: 50%;
+  /* margin-top: 10%; */
+  font-size: xx-large;
+  font-weight: bold;
+  resize: none;
+  overflow-y: hidden;
+}
+.headdraft1{
+  font-family: sans-serif;
+
+  resize: none;
+  /* height: 5vh; */
+  background-color: rgb(22, 22, 22);
+  outline: rgb(22, 22, 22);
+  border: rgb(22, 22, 22);
+  color: white;
+  width: 50%;
+  /* margin-top: 1%; */
+  font-size: large;
+  font-weight: bold;
+  overflow-y: hidden;
+
+}
+.inputbullet{
+  display: flex;
+}
+.buttsave{
+  margin-top: 3%;
+  background-color: white;
+  width: 25%;
+  height: 5vh;
+  border-radius: 15px;
+  font-size: larger;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+}
+.buttsave:hover{
+  border-radius: 0px;
+  width: 30%;
+  height: 8vh;
+}
