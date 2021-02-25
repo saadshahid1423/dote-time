@@ -1,6 +1,6 @@
 .firstpage{
   background-color: rgb(47, 41, 41);
-  height: 450vh;
+  height: 550vh;
 }
 .textinputdiv{
   /* display: flex; */
@@ -247,7 +247,7 @@
 
 .icondiv {
   background-color: rgb(87, 85, 85);
-  width:110%;
+  width:120%;
   border-radius: 10px;
 }
 

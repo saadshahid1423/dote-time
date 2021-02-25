@@ -5,6 +5,7 @@ import Second from '../screens/second/second';
 // import Second from '../screens/first/first';
 import First from '../screens/first/first';
 import Home from '../screens/home/home';
+import Editnote from '../screens/editnote/editnote';
 
 class AppRouter extends React.Component{
     render(){
@@ -14,6 +15,7 @@ class AppRouter extends React.Component{
                 <Route path="/makenote" component={Second} />
                 <Route path="/note" component={Note} />
                 <Route path="/Home" component={Home} />
+                <Route path="/editnote" component={Editnote} />
             </Router>
         )
     }

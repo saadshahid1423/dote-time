@@ -2,15 +2,15 @@ import React from 'react';
 import firebase from '../../config/firebase'
 import '../../App.css';
 
-class Note extends React.Component{
-   constructor(){
-       super()
+class Editnote extends React.Component{
+   constructor(props){
+       super(props)
        this.state={
     inputhead:"",input1:'',input2:'',input3:'',   input4:'',input5:'',input6:'',input7:'',input8:'',input9:'',input10:'',
     input11:'',input12:'',input13:'',input14:'',input15:'',input16:'',input17:'',input18:'',input19:'',input20:'',
     input21:'',input22:'',input23:'',input24:'',input25:'',input26:'',input27:'',input28:'',input29:'',input30:'',
     input31:'',input32:'',input33:'',input34:'',input35:'',input36:'',input37:'',input38:'',input39:'',input40:'',          
-    input41:'',input42:'',input43:'',input44:'',input45:'',input46:'',input47:'',
+    input41:'',input42:'',input43:'',input44:'',input45:'',input46:'',input47:'',details: [this.props.location.state.detail]
 }
 }
 
@@ -73,22 +73,23 @@ Save= ()=>{
         input46:this.state.input46,
         input47:this.state.input47,
             } 
-    firebase.database().ref('/').child("Detail").push(obj)
-    this.props.history.push('/Home')
+    firebase.database().ref('/').child("editDetail").push(obj)
+    this.props.history.push('/home')
 
 };
 
 
 
 render(){
-   
+   console.log(this.state.details)
     return(
             <div className="firstpage">
+                  {this.state.details.map((i)=>{
+                return(
                 <div className="textinputdiv">
-                    
-                <textarea onChange={(e)=>this.setState({inputhead:e.target.value})} defaultValue="My First TransNote" className="headdraft" type="text" required/>
+                <textarea onChange={(e)=>this.setState({inputhead:e.target.value})} defaultValue={i.inputHead} className="headdraft" type="text" required/>
                 <div className="inputbullet">
-                <li style={{color:"white"}}></li><textarea  onChange={(e)=>this.setState({input1:e.target.value})} defaultValue="Hello, it is your first TransNote" className="headdraft1" type="text" required/>
+                <li style={{color:"white"}}></li><textarea  onChange={(e)=>this.setState({input1:e.target.value})} className="headdraft1" type="text" required/>
                 </div>
                 <div className="inputbullet">
                 <li style={{color:"white"}}></li><textarea onChange={(e)=>this.setState({input2:e.target.value})} defaultValue="This document is created based on your intrests. Don't miss trying the following features, and feel free to make an edits." className="headdraft1" type="text" required/>
@@ -235,6 +236,8 @@ render(){
                 <li style={{color:"white"}}></li><textarea onChange={(e)=>this.setState({input47:e.target.value})} defaultValue="..." className="headdraft1" type="text" required/>
                 </div>
                 </div>
+                   )
+                })} 
                 <div>
                     <center>
                 <button onClick={this.Save} className="buttsave">Save</button>
@@ -245,4 +248,4 @@ render(){
     };
 };
 
-export default Note;
+export default Editnote;
