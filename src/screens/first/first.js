@@ -15,14 +15,14 @@ class First extends React.Component {
 
     render() {
         return (
-            <div  className="divback1">
+            <div className="divback1">
                 <div className="div1">
-                <Fade top cascade>
-                    <h1 style={{marginTop:"5%"}}>Access notes anytime, anywhere</h1>
+                    <Fade top cascade>
+                        <h1 style={{ marginTop: "5%" }}>Access notes anytime, <br /> anywhere</h1>
                     </Fade>
                     <br />  <br />  <br />  <br />  <br />
                     <Zoom>
-                    <img className="image1" src="https://i.pinimg.com/originals/52/8e/29/528e2946f76a74030660b231c7ff1dc1.png" />
+                        <img className="image1" src="https://i.pinimg.com/originals/52/8e/29/528e2946f76a74030660b231c7ff1dc1.png" />
                     </Zoom>
                 </div>
                 <br />
@@ -32,11 +32,11 @@ class First extends React.Component {
                     <br />
                     <br />
                     <br />
-                <Fade bottom cascade>
-                    <center>
-                        <button className="butt" onClick={() => this.get_started()}>Get Started</button>
-                    </center>
-                        </Fade>
+                    <Fade bottom cascade>
+                        <center>
+                            <button className="butt" onClick={() => this.get_started()}>Get Started</button>
+                        </center>
+                    </Fade>
                 </div>
             </div>
         );

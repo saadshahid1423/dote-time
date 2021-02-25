@@ -6,34 +6,34 @@ import firebase from '../../config/firebase'
 
 
 class Home extends React.Component {
-      constructor(props) {
-    super(props);
-    // console.log(this.props)
-    this.state = {
-      completeDetail: [
-      ]
-    };
-  }
+    constructor(props) {
+        super(props);
+        // console.log(this.props)
+        this.state = {
+            completeDetail: [
+            ]
+        };
+    }
 
-  componentDidMount() {
-    var arr = []
-    firebase.database().ref('/').child("Detail").on("child_added",   (data)=> {
-      arr.push(data.val())
-      this.setState({
-        completeDetail: arr
-      })
-    })
-  }
-  send_details=(i)=>{
-      this.props.history.push("/editnote",{detail:i})
-  }
-    get_started=()=>{
+    componentDidMount() {
+        var arr = []
+        firebase.database().ref('/').child("Detail").on("child_added", (data) => {
+            arr.push(data.val())
+            this.setState({
+                completeDetail: arr
+            })
+        })
+    }
+    send_details = (i) => {
+        this.props.history.push("/editnote", { detail: i })
+    }
+    get_started = () => {
         this.props.history.push("/note")
     }
     render() {
         // console.log("data===>", this.state.completeDetail)
         return (
-            <div style={{backgroundColor:"rgb(47, 41, 41)", height:"100vh"}}>
+            <div style={{ backgroundColor: "rgb(47, 41, 41)", height: "100vh" }}>
                 <nav className="navbar navbar-expand-lg navbar-light ">
                     <div className="container-fluid">
                         <h3 className="hed">Home</h3>
@@ -51,24 +51,25 @@ class Home extends React.Component {
                 </nav>
 
                 <br /><br /> <br />
-                <div className="displayflex" style={{ display: "flex", justifyContent: "center" }}>
-                {this.state.completeDetail.map((i)=>{
-                return(
-                    <Fade right cascade>
-                    <div onClick={()=>this.send_details(i)} style={{cursor:"pointer"}} className="Responsive ">
-                        <div className='icondiv'>
-                            <div className='icondiv2'>
-                                <div style={{ display: "flex", justifyContent: "center" }}>
-                                    <FontAwesomeIcon icon={faClipboard} color="white" size="3x" style={{ marginTop: "20px" }} />
+                <div className="displayflex container row">
+                    {this.state.completeDetail.map((i) => {
+                        return (
+                            <Fade right cascade>
+                                <div onClick={() => this.send_details(i)} style={{ cursor: "pointer" }} className="Responsive ">
+                                    <div className='icondiv'>
+                                        <div className='icondiv2'>
+                                            <div style={{ display: "flex", justifyContent: "center" }}>
+                                                <FontAwesomeIcon icon={faClipboard} color="white" size="3x" style={{ marginTop: "20px" }} />
+                                            </div>
+                                            <h5 style={{ color: "white" }} className="hed2">{i.inputHead}</h5>
+                                            <p className="para1">{i.timeDate}</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h5 className="hed2">{i.inputHead}</h5>
-                                <p className="para1">{i.timeDate}</p>
-                            </div>
-                        </div>
-                    </div>         
-                    </Fade>
-            )
-                 })} 
+                            </Fade>
+
+                        )
+                    })}
                 </div>
             </div>
 
